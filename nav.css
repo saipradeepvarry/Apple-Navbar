@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header,
+#watch,
+#vision,
+#ipad,
+#tradein h1 {
+    width: 100vw;
+    height: 778px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#iphone,
+#vision,
+#airpods,
+#apple-event,
+#cards h1 {
+    width: 100vw;
+    height: 778px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    color: #000;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bag-title h1 {
+    justify-content: flex-start
+}
+
+.main-nav {
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    display: block;
+    margin: 0;
+    width: 100%;
+    min-width: 320px;
+    height: 48px;
+    max-height: 44px;
+    font-size: 17px;
+    user-select: none;
+    box-sizing: border-box;
+    padding: 0 22px;
+    position: fixed;
+}
+
+nav.main-nav.mobile-active {
+    height: 100%;
+    background-color: #000;
+    max-height: none;
+
+}
+
+.main-nav.mobile-active .main-menu-itens {
+    flex-direction: column;
+    padding-top: 75px;
+    justify-content: space-between;
+    padding-left: 50px;
+}
+
+.main-nav.mobile-active .main-menu-itens li a {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.main-nav.mobile-active ul.main-menu-itens li.icon-menu-mobile {
+    position: absolute;
+    top: 1px;
+    right: 20px;
+}
+
+.main-nav.mobile-active .main-menu-itens li a:hover .dropdown {
+    opacity: 0;
+}
+
+.main-nav.mobile-active li a .icon-arrow {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.main-nav.mobile-active li a:hover .icon-arrow {
+    opacity: 1;
+    visibility: visible;
+}
+
+.main-nav.mobile-active .apple-logo {
+    display: none;
+}
+
+.main-nav.mobile-active .bag-logo {
+    display: none;
+}
+
+.main-nav.mobile-active .search-logo {
+    display: none;
+}
+
+.main-nav.mobile-active .icon-text {
+    display: none;
+}
+
+.main-nav.mobile-active .name-item {
+    display: flex;
+}
+
+.main-nav.mobile-active .icon-arrow {
+    display: flex;
+    transform: rotate(180deg);
+}
+
+.main-menu-itens {
+    cursor: default;
+    width: auto;
+    height: 44px;
+    display: flex;
+    min-width: 320px;
+    justify-content: space-between;
+    user-select: none;
+    list-style: none;
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 1024px;
+}
+
+.name-item {
+    display: none;
+    font-size: 28px;
+    line-height: 1.1428571429;
+    font-weight: 600;
+    letter-spacing: .007em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.name-item {
+    color: #fff;
+    padding-bottom: 1px;
+}
+
+.icon-arrow {
+    display: none;
+}
+
+.icon-menu-mobile {
+    display: none;
+    width: 20px;
+    height: 44px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-icon {
+    position: relative;
+    width: 100%;
+}
+
+.line-1,
+.line-2 {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: #fff;
+}
+
+.line-1 {
+    top: -4px;
+}
+
+.line-2 {
+    top: 4px;
+}
+
+.dropdown {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    transition: all .4s ease-in;
+    padding-top: 20px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.nav-dropdown {
+    display: flex;
+    max-width: 1024px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.dropdow-inner {
+    display: flex;
+    padding: 50px;
+    padding-left: 25px;
+    width: 100%;
+}
+
+.dropdown-item {
+    padding-left: 10%;
+}
+
+.item-heading {
+    font-size: 12px;
+    line-height: 1.3333733333;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: rgb(134, 134, 139);
+    padding-bottom: 10px;
+}
+
+.item-heading-small {
+    padding-left: 15px;
+}
+
+nav .main-menu-itens a:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(20px);
+}
+
+.input-search {
+    display: flex;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.input-area {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: .009em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    color: #E8E8ED;
+    line-height: 1;
+}
+
+.input-area:focus {
+    outline: 0;
+}
+
+.item-list {
+    font-size: 12px;
+    line-height: 1.3333733333;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.searchlist {
+    padding-left: 5px;
+}
+
+.item-list ul {
+    list-style: none;
+    color: #fff
+}
+
+.item-list ul li {
+    list-style: none;
+    padding-bottom: 5px;
+}
+
+.item-list-main ul {
+    list-style: none;
+    color: #fff
+}
+
+.item-list-main ul li {
+    list-style: none;
+    padding-bottom: 5px;
+}
+
+.dropdow-inner-search {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    padding-left: 25px;
+    width: 100%;
+}
+
+.bag-subtitle {
+    padding-top: 20px;
+    padding-left: 5px;
+}
+
+.item-list-main {
+    font-size: 24px;
+    line-height: 1.1666666667;
+    font-weight: 600;
+    letter-spacing: .009em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.item-list {
+    font-size: 12px;
+    line-height: 1.3333733333;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.searchlist {
+    padding-left: 5px;
+}
+
+.item-list ul {
+    list-style: none;
+}
+
+.item-list ul li {
+    list-style: none;
+    padding-bottom: 5px;
+}
+
+.item-list-main ul {
+    list-style: none;
+}
+
+.item-list-main ul li {
+    list-style: none;
+    padding-bottom: 5px;
+}
+
+.bag-title {
+    color: #fff;
+
+}
+
+.hyperlink {
+    color: blue;
+}
+
+@media only screen and (max-width: 833px) {
+    .icon-text {
+        display: none;
+    }
+
+    .icon-menu-mobile {
+        display: flex;
+    }
+}
